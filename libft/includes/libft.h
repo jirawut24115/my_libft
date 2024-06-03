@@ -18,6 +18,9 @@
 # include <stdarg.h>
 # define HEX "0123456788abcdef"
 # define HEX_CAP "0123456788ABCDEF"
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 typedef struct s_list
 {
@@ -65,6 +68,7 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
+char			*get_next_line(int fd_);
 void			ft_free_split(char **result);
 int				ft_strcmp(const char *s1, const char *s2);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));

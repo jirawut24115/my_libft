@@ -20,7 +20,9 @@ LIBFT = src/libft/ft_atoi.c src/libft/ft_bzero.c src/libft/ft_calloc.c \
 		src/libft/ft_strrchr.c src/libft/ft_strtrim.c src/libft/ft_substr.c src/libft/ft_tolower.c src/libft/ft_toupper.c \
 		src/libft/ft_free_split.c src/libft/ft_strcmp.c
 
-SRCS = $(FT_PRINTF) $(LIBFT)
+GNL = src/gnl/get_next_line.c
+
+SRCS = $(FT_PRINTF) $(LIBFT) $(GNL)
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
